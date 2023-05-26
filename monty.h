@@ -9,6 +9,15 @@
 #include <ctype.h>
 
 /* Data Structure for the stack */
+
+/**
+ * struct stack_s - Represents a stack node
+ * @n: Value of the stack node
+ * @prev: Pointer to the previous stack node
+ * @next: Pointer to the next stack node
+ *
+ * Description: This structure represents a node in the stack
+ */
 typedef struct stack_s
 {
 	int n;
@@ -16,12 +25,21 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
+
 /* Data strucuture for opcodes */
+/**
+ * struct instruction_s - Represents an opcode instruction
+ * @opcode: The opcode name
+ * @f: Pointer to the function implementing the opcode
+ *
+ * Descritpion: This structure represents an opcode instruction used
+ */
 typedef struct instruction_s
 {
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
 
 /* Function prototypes */
 void add(stack_t **stack, unsigned int line_number);
