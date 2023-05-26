@@ -11,6 +11,15 @@
 
 /* Function prototype for line parsing */
 void parseLine(char *line, stack_t **stack, unsigned int line_number);
+
+/**
+ * main - Entry point of the program.
+ * @argc: The number of command-line arguments.
+ * @argv: An array of strings containing the command-line arguments.
+ *
+ * Return: 0 on success, or exit with failure on error.
+ */
+
 int main(int argc, char *argv[])
 {
 	FILE *file;
@@ -42,8 +51,11 @@ int main(int argc, char *argv[])
 	/* Free the stack */
 	while (stack != NULL)
 	{
+
 		stack_t *temp = stack;
+
 		stack = stack->next;
+
 		free(temp);
 	}
 	return (0);

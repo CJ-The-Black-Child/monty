@@ -1,8 +1,9 @@
 #include "monty.h"
 /**
- * parseLine -
- *
- * return:
+ * parseLine - Parses a line of input and executes the corresponding opcode.
+ * @line: The line to parse
+ * @stack: A pointer to the top of the stack
+ * @line_number: The line number being parsed
  */
 
 void parseLine(char *line, stack_t **stack, unsigned int line_number)
@@ -28,7 +29,7 @@ void parseLine(char *line, stack_t **stack, unsigned int line_number)
 		/* Here is where I added the opcode functions */
 		{NULL, NULL}
 	};
-	opcode =strtok(line, " \t\n");
+	opcode = strtok(line, " \t\n");
 	if (opcode == NULL || opcode[0] == '#')
 		return;
 	for (i = 0; opcodes[i].opcode != NULL; i++)
