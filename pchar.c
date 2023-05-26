@@ -1,6 +1,11 @@
 #include "monty.h"
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * pchar - Prints the ASCOO character value at the top of the stack.
+ * @stack: A pointer to the top of the stack
+ * @line_number: The line number being executed.
+ */
 
 void pchar(stack_t **stack, unsigned int line_number)
 {
