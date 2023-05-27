@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 	while (fgets(line, MAX_LINE_LENGTH, file) != NULL)
 	{
 		line_number++;
-		line[strcspn(line, "$")] = '\0';
+		line[strcspn(line, "\n")] = '\0';
 		parseLine(line, &stack, line_number);
 	}
 
